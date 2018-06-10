@@ -1,5 +1,5 @@
 import random
-
+import time
 
 class Game:
 
@@ -21,7 +21,9 @@ class Game:
             print("Computer picks Paper")
         elif (self.botHand == 3):
             print("Computer picks Scissor")
-
+        
+        time.sleep(1)
+        
         if ((self.userHand == 'rock' or self.userHand == 'Rock') and self.botHand == 1):
             self.winner = 'You Tie'
         elif ((self.userHand == 'rock' or self.userHand == 'Rock') and self.botHand == 2):
@@ -42,7 +44,6 @@ class Game:
             self.winner = 'You Tie!'
         else:
             self.winner = 'INVALID input, try again'
-
 
 def main():
     myGame = Game("Divyansh")
